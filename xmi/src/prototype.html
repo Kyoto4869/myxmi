@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>prototype实例的公用方法和属性</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 函数类（构造函数）
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			Person.prototype.say=function(){
+				alert(`大家好，我是${this.name},今年${this.age}`)
+			}
+			//prototype是所有类的实例都有公用方法和属性
+			// 类的实例
+			var p1 =new Person("jack",20);
+			
+			var p2 =new Person("安比",20);
+			//new 实例化对象
+			var p2 =Person("tom",50)//直接调用得到函数的返回值 默认为undefined
+		</script>
+	</body>
+</html>
